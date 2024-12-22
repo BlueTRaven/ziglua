@@ -1720,7 +1720,7 @@ pub const Lua = opaque {
         .luau => i32,
         else => usize,
     } {
-        return c.lua_objlen(@ptrCast(lua), index);
+        return c.lua_rawlen(@ptrCast(lua), index);
     }
 
     pub const ProtectedCallArgs = struct {
